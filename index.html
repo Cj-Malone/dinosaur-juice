@@ -30,9 +30,9 @@
 				});
 				const loves = await map.loadImage('assets/logos/loves.png');
 				map.addImage('loves', loves.data)
-				const ta = await map.loadImage('assets/logos/ta.jpg');
+				const ta = await map.loadImage('assets/logos/ta.png');
 				map.addImage('ta', ta.data)
-				const flying = await map.loadImage('assets/logos/flying j.jpg');
+				const flying = await map.loadImage('assets/logos/flying j.png');
 				map.addImage('flying', flying.data)
 				const pilot = await map.loadImage('assets/logos/pilot.png');
 				map.addImage('pilot', pilot.data)
@@ -44,12 +44,12 @@
 					'source': 'services-data',
 					'filter': ['==', 'highway', 'services'],
 					'layout': {
-						'icon-size': 0.25,
 						'icon-image': ['match',
 							['get', 'brand'],
 							'Love\'s', 'loves',
 							'TA', 'ta',
 							'Flying J', 'flying',
+							'Pilot', 'pilot',
 							'Petro', 'petro',
 							'car'
 						]
