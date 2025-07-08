@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Drive</title>
 		<script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
 		<link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
@@ -46,13 +47,10 @@
 					const services = e.features[0];
 
 					html = '';
-					if (services.properties.name) {
-						html += '<h3>'
-						html += services.properties.name
-						if (services.properties.branch) { html += ' ' + services.properties.branch }
-						if (services.properties.ref) { html += ' | ' + services.properties.ref }
-						html += '</h3>'
-					}
+					html += '<h3 style="display:inline;">' + services.properties.name + '</h3>'
+					if (services.properties.branch) { html += ' ' + services.properties.branch }
+					if (services.properties.ref) { html += ' | ' + services.properties.ref }
+					html += ' <a href="https://www.openstreetmap.org/' + services.properties['@id'] + '" target="_blank">✏️</a>'
 					html += '<address>' +
 						(services.properties["addr:housename"] ? services.properties["addr:housename"] + ', ': '') +
 						(services.properties["addr:housenumber"] ? services.properties["addr:housenumber"] + ' ': '') +
