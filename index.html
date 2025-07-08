@@ -26,15 +26,15 @@
 					type: 'geojson',
 					data: 'data/services-hgv.geojson'
 				});
-				const loves = await map.loadImage('/assets/logos/loves.png');
+				const loves = await map.loadImage('assets/logos/loves.png');
 				map.addImage('loves', loves.data)
-				const ta = await map.loadImage('/assets/logos/ta.jpg');
+				const ta = await map.loadImage('assets/logos/ta.jpg');
 				map.addImage('ta', ta.data)
-				const flying = await map.loadImage('/assets/logos/flying j.jpg');
+				const flying = await map.loadImage('assets/logos/flying j.jpg');
 				map.addImage('flying', flying.data)
-				const pilot = await map.loadImage('/assets/logos/pilot.png');
+				const pilot = await map.loadImage('assets/logos/pilot.png');
 				map.addImage('pilot', pilot.data)
-				const petro = await map.loadImage('/assets/logos/petro.png');
+				const petro = await map.loadImage('assets/logos/petro.png');
 				map.addImage('petro', petro.data)
 				map.addLayer({
 					'id': 'services-layer',
