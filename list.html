@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dinosaur Juice</title>
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="A list of truck stops in USA." />
+		<style>
+			.list-item {
+				border-style: solid;
+				margin-bottom: 10px;
+			}
+			.logo {
+				vertical-align: middle;
+				max-height: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="list"></div>
+		<script>
+			const brandTable = {
+				'Flying J': 'flying j.png',
+				'Love\'s': 'loves.png',
+				'Petro': 'petro.png',
+				'Pilot': 'pilot.png',
+				'TA': 'ta.png',
+			}
+			const list = document.getElementById('list');
+			fetch('data/services-hgv.geojson')
+				.then(res => res.json())
+				.then(res => {
+					res.features.forEach((services) => {
+						html = '';
+						html += '<h3 style="display: inline;">'
+						if (brandTable[services.properties.brand]) {
+							html += '<img src="assets/logos/' + brandTable[services.properties.brand] + '" alt="' + services.properties.brand + ' logo" class="logo">';
+						}
+						html += (services.properties.name || '?')
+						html + '</h3>';
+						if (services.properties.branch) { html += ' ' + services.properties.branch }
+						if (services.properties.ref) { html += ' | ' + services.properties.ref }
+						html += ' <a href="https://www.openstreetmap.org/' + services.properties['@id'] + '" target="_blank" style="text-decoration: none;">✏️</a>'
+
+						html += '<address>' +
+							(services.properties["addr:housename"] ? services.properties["addr:housename"] + ', ' : '') +
+							(services.properties["addr:housenumber"] ? services.properties["addr:housenumber"] + ' ' : '') +
+							(services.properties["addr:street"] ? services.properties["addr:street"] + ', ' : (services.properties["addr:place"] ? services.properties["addr:place"] + ', ' : '')) +
+							(services.properties["addr:city"] ? services.properties["addr:city"] + ', ' : '') +
+							(services.properties["addr:postcode"] ? services.properties["addr:postcode"] + ', ' : '') +
+							(services.properties["addr:state"] ? services.properties["addr:state"] + ', ' : '') +
+							(services.properties["addr:country"] ? services.properties["addr:country"] : '') +
+							'</address>'
+
+						if (services.properties.website) { html += '<a href="' + services.properties.website + '" rel="noreferrer noopener" target="_blank">Website</a> ' }
+						if (services.properties.phone) { html += '<a href="tel:' + services.properties.phone + '">Call</a> ' }
+						if (services.properties["contact:facebook"]) { html += '<a href="' + services.properties["contact:facebook"] + '">Facebook</a> ' }
+
+						html += '<br>'
+						if (services.properties['bin'] == 'yes') { html += '🗑️' }
+						if (services.properties['compressed_air'] == 'yes') { html += '💨' }
+						if (services.properties['drinking_water'] == 'yes') { html += '💧' }
+						if (services.properties['internet_access'] == 'wlan') { html += '🛜' }
+
+						const entry = document.createElement('div');
+						entry.innerHTML = html;
+						entry.className = "list-item";
+						list.appendChild(entry);
+					});
+				});
+		</script>
+	</body>
+</html>
+
