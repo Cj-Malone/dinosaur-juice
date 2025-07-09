@@ -30,6 +30,23 @@
 				</tr>
 			</thead>
 			<tbody></tbody>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
 		</table>
 		<script>
 			const table = new DataTable('#list');
@@ -53,6 +70,17 @@
 							services.properties["addr:country"] || null,
 						]).draw(false);
 					});
+
+					table.columns().every(function() {
+						const input = document.createElement('input');
+						input.addEventListener('keyup', () => {
+							if (this.search() != this.value) {
+								this.search(input.value).draw();
+							}
+						});
+
+						this.footer().replaceChildren(input);
+					})
 				});
 		</script>
 	</body>
