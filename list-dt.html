@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dinosaur Juice</title>
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="A list of truck stops in USA." />
+		<script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+		<script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+	</head>
+	<body>
+		<table id="list">
+			<thead>
+				<tr>
+					<th>brand</th>
+					<th>name</th>
+					<th>branch</th>
+					<th>ref</th>
+					<th>website</th>
+					<th>phone</th>
+					<th>facebook</th>
+					<th>housenumber</th>
+					<th>street</th>
+					<th>city</th>
+					<th>postcode</th>
+					<th>state</th>
+					<th>bin</th>
+					<th>compressed_air</th>
+					<th>drinking_water</th>
+					<th>internet_access</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<script>
+			const table = new DataTable('#list');
+			fetch('data/services-hgv.geojson')
+				.then(res => res.json())
+				.then(res => {
+					res.features.forEach((services) => {
+						table.row.add([
+							services.properties["brand"] || null,
+							services.properties["name"] || null,
+							services.properties["branch"] || null,
+							services.properties["ref"] || null,
+							services.properties["website"] || null,
+							services.properties["phone"] || null,
+							services.properties["contact:facebook"] || null,
+							services.properties["addr:housenumber"] || null,
+							services.properties["addr:street"] || null,
+							services.properties["addr:city"] || null,
+							services.properties["addr:postcode"] || null,
+							services.properties["addr:state"] || null,
+							services.properties["bin"] || null,
+							services.properties["compressed_air"] || null,
+							services.properties["drinking_water"] || null,
+							services.properties["internet_access"] || null
+						]).draw(false);
+					});
+				});
+		</script>
+	</body>
+</html>
+
