@@ -56,7 +56,7 @@
 
 						if (services.properties.website) { html += '<a href="' + services.properties.website + '" rel="noreferrer noopener" target="_blank">Website</a> ' }
 						if (services.properties.phone) { html += '<a href="tel:' + services.properties.phone + '">Call</a> ' }
-						if (services.properties["contact:facebook"]) { html += '<a href="' + services.properties["contact:facebook"] + '">Facebook</a> ' }
+						if (services.properties["contact:facebook"] || services.properties["brand:facebook"]) { html += '<a href="' + services.properties["contact:facebook"] || services.properties["brand:facebook"] + '">Facebook</a> ' }
 
 						html += '<br>'
 						if (services.properties['bin'] == 'yes') { html += '🗑️' }
