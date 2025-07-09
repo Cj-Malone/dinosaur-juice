@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Dinosaur Juice</title>
 		<meta property="og:type" content="website" />
-		<meta property="og:description" content="A list of truck stops in USA." />
+		<meta property="og:description" content="A list of truck stops in North America." />
 		<script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
 		<script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
@@ -26,6 +26,7 @@
 					<th>city</th>
 					<th>postcode</th>
 					<th>state</th>
+					<th>country</th>
 				</tr>
 			</thead>
 			<tbody></tbody>
@@ -49,6 +50,7 @@
 							services.properties["addr:city"] || null,
 							services.properties["addr:postcode"] || null,
 							services.properties["addr:state"] || null,
+							services.properties["addr:country"] || null,
 						]).draw(false);
 					});
 				});
