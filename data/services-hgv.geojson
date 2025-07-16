@@ -1,8 +1,5 @@
 {
   "type": "FeatureCollection",
-  "generator": "overpass-turbo",
-  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-07-08T14:34:25Z",
   "features": [
     {
       "type": "Feature",
@@ -32390,6 +32387,86 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "way/223432260",
+        "addr:country": "US",
+        "addr:state": "FL",
+        "branch": "Fort Pierce",
+        "brand": "Love's",
+        "brand:wikidata": "Q1872496",
+        "hgv": "yes",
+        "highway": "services",
+        "name": "Love's Travel Stop",
+        "ref": "415",
+        "website": "https://www.loves.com/locations/415"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.3983677,
+              27.4130335
+            ],
+            [
+              -80.3974658,
+              27.4132281
+            ],
+            [
+              -80.3974719,
+              27.4137978
+            ],
+            [
+              -80.3970052,
+              27.4137906
+            ],
+            [
+              -80.3970154,
+              27.414681
+            ],
+            [
+              -80.3974325,
+              27.4146816
+            ],
+            [
+              -80.3974315,
+              27.4148454
+            ],
+            [
+              -80.3981746,
+              27.414874
+            ],
+            [
+              -80.3982068,
+              27.4147478
+            ],
+            [
+              -80.399041,
+              27.4147549
+            ],
+            [
+              -80.3990383,
+              27.4146121
+            ],
+            [
+              -80.3983677,
+              27.4146049
+            ],
+            [
+              -80.3983677,
+              27.4136168
+            ],
+            [
+              -80.3983677,
+              27.4130335
+            ]
+          ]
+        ]
+      },
+      "id": "way/223432260"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "way/223435251",
         "addr:country": "US",
         "addr:state": "GA",
@@ -34470,6 +34547,7 @@
         "highway": "services",
         "name": "Love's Travel Stop",
         "ref": "267",
+        "toilets": "yes",
         "website": "https://www.loves.com/locations/267"
       },
       "geometry": {
@@ -38600,52 +38678,36 @@
         "coordinates": [
           [
             [
-              -119.2658455,
-              39.6186441
+              -119.2666948,
+              39.6185197
             ],
             [
-              -119.2667762,
-              39.6184788
+              -119.2669409,
+              39.6184912
             ],
             [
-              -119.2683507,
-              39.6184829
+              -119.2686731,
+              39.6184942
             ],
             [
-              -119.2683641,
-              39.6182598
+              -119.2686786,
+              39.6173221
             ],
             [
-              -119.2682488,
-              39.6182577
+              -119.2673878,
+              39.6171442
             ],
             [
-              -119.2682541,
-              39.6174932
+              -119.2656954,
+              39.617272
             ],
             [
-              -119.2679917,
-              39.6172959
+              -119.2657281,
+              39.6186694
             ],
             [
-              -119.2672617,
-              39.6172969
-            ],
-            [
-              -119.2662505,
-              39.6174746
-            ],
-            [
-              -119.2661781,
-              39.6175201
-            ],
-            [
-              -119.2658314,
-              39.6178186
-            ],
-            [
-              -119.2658455,
-              39.6186441
+              -119.2666948,
+              39.6185197
             ]
           ]
         ]
@@ -58542,7 +58604,7 @@
         "addr:housenumber": "885",
         "addr:postcode": "84054",
         "addr:state": "UT",
-        "addr:street": "West North Point Circle South",
+        "addr:street": "West North Point Circle",
         "brand": "Flying J",
         "brand:wikidata": "Q64130592",
         "check_date": "2024-08-02",
@@ -58574,8 +58636,8 @@
               40.8350256
             ],
             [
-              -111.932407,
-              40.8359995
+              -111.9324075,
+              40.8359997
             ],
             [
               -111.9326873,
@@ -129820,6 +129882,66 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "way/1415269565",
+        "addr:city": "Valdosta",
+        "addr:country": "US",
+        "addr:housenumber": "1394",
+        "addr:postcode": "31602",
+        "addr:state": "GA",
+        "addr:street": "Saint Augustine Road",
+        "brand": "QuikTrip",
+        "brand:wikidata": "Q7271953",
+        "hgv": "yes",
+        "highway": "services",
+        "name": "QuikTrip",
+        "opening_hours": "24/7",
+        "ref": "7071",
+        "website": "https://locations.quiktrip.com/ga/valdosta/1394-n-st-augustine"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -83.3346814,
+              30.8450265
+            ],
+            [
+              -83.3333966,
+              30.8444646
+            ],
+            [
+              -83.3330184,
+              30.844939
+            ],
+            [
+              -83.3329782,
+              30.8454502
+            ],
+            [
+              -83.3329031,
+              30.8459867
+            ],
+            [
+              -83.3337185,
+              30.8463736
+            ],
+            [
+              -83.3343032,
+              30.845639
+            ],
+            [
+              -83.3346814,
+              30.8450265
+            ]
+          ]
+        ]
+      },
+      "id": "way/1415269565"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/9175586355",
         "addr:country": "US",
         "addr:state": "CA",
@@ -130041,6 +130163,35 @@
         ]
       },
       "id": "node/12142985740"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13005257662",
+        "addr:city": "Valdosta",
+        "addr:country": "US",
+        "addr:postcode": "31601",
+        "addr:state": "GA",
+        "addr:street": "Old Clyattville Road",
+        "brand": "Love's",
+        "brand:wikidata": "Q1872496",
+        "hgv": "yes",
+        "highway": "services",
+        "internet_access": "wlan",
+        "name": "Love's Travel Stop",
+        "phone": "+1 229-588-7706",
+        "ref": "550",
+        "shower": "yes",
+        "website": "https://www.loves.com/locations/550"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.298092,
+          30.7740206
+        ]
+      },
+      "id": "node/13005257662"
     }
   ]
 }
