@@ -42,11 +42,11 @@
 				const petro = await map.loadImage('assets/logos/petro.png');
 				map.addImage('petro', petro.data);
 				map.addLayer({
-					'id': 'services-layer',
-					'type': 'symbol',
-					'source': 'services-data',
-					'filter': ['==', 'highway', 'services'],
-					'layout': {
+					id: 'services-layer',
+					type: 'symbol',
+					source: 'services-data',
+					filter: ['==', 'highway', 'services'],
+					layout: {
 						'icon-image': ['match',
 							['get', 'brand'],
 							'Love\'s', 'loves',
@@ -65,8 +65,8 @@
 					source: 'services-data',
 					filter: ['==', 'highway', 'services'],
 					paint: {
-						'fill-color': 'red',
-						'fill-opacity': 0.5
+						'fill-color': '#fc8',
+						'fill-opacity': 0.4
 					},
 					minzoom: 16
 				});
