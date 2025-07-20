@@ -11,7 +11,7 @@
 		<style type="text/css">
 			html, body, #map {
 				height: 100%;
-				margin: 0;
+				margin: 0px;
 			}
 		</style>
 	</head>
@@ -55,9 +55,33 @@
 							'Petro', 'petro',
 							'car'
 						]
-					}
+					},
+					maxzoom: 16
 				});
-				map.on("click", "services-layer", (e) => {
+				map.addLayer({
+					id: 'services-polygon-layer',
+					type: 'fill',
+					source: 'services-data',
+					filter: ['==', 'highway', 'services'],
+					paint: {
+						'fill-color': 'red',
+						'fill-opacity': 0.5
+					},
+					minzoom: 16
+				});
+				map.addLayer({
+					id: 'services-title-layer',
+					type: 'symbol',
+					source: 'services-data',
+					filter: ['==', 'highway', 'services'],
+					layout: {
+						'text-field': '{name} {branch} {ref}',
+						'text-size': 16,
+						'text-font': ['Noto Sans Regular']
+					},
+					minzoom: 16
+				});
+				function click(e) {
 					const services = e.features[0];
 
 					html = '';
@@ -88,7 +112,10 @@
 						.setHTML(html)
 						.setLngLat(e.lngLat)
 						.addTo(map);
-				});
+				}
+				map.on("click", "services-layer", click);
+				map.on("click", "services-polygon-layer", click);
+				map.on("click", "services-title-layer", click);
 			});
 		</script>
 	</body>
