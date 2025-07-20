@@ -23,23 +23,24 @@
 				center: [-96.5, 35.5],
 				zoom: 5,
 				container: 'map',
-				hash: true,
+				hash: true
 			});
+			map.addControl(new maplibregl.NavigationControl());
 			map.on('load', async function() {
 				map.addSource('services-data', {
 					type: 'geojson',
 					data: 'data/services-hgv.geojson'
 				});
 				const loves = await map.loadImage('assets/logos/loves.png');
-				map.addImage('loves', loves.data)
+				map.addImage('loves', loves.data);
 				const ta = await map.loadImage('assets/logos/ta.png');
-				map.addImage('ta', ta.data)
+				map.addImage('ta', ta.data);
 				const flying = await map.loadImage('assets/logos/flying j.png');
-				map.addImage('flying', flying.data)
+				map.addImage('flying', flying.data);
 				const pilot = await map.loadImage('assets/logos/pilot.png');
-				map.addImage('pilot', pilot.data)
+				map.addImage('pilot', pilot.data);
 				const petro = await map.loadImage('assets/logos/petro.png');
-				map.addImage('petro', petro.data)
+				map.addImage('petro', petro.data);
 				map.addLayer({
 					'id': 'services-layer',
 					'type': 'symbol',
