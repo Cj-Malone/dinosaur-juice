@@ -104,6 +104,9 @@
 					if (services.properties["contact:facebook"] || services.properties["brand:facebook"]) { html += '<a href="' + (services.properties["contact:facebook"] || services.properties["brand:facebook"]) + '" rel="noreferrer noopener" target="_blank">Facebook</a> ' }
 
 					html += '<br>'
+
+					if (services.properties['hgv'] === 'yes' || services.properties['hgv'] === 'designated') { html += '🚚' }
+					if (services.properties['motorcar'] === 'yes' || services.properties['motorcar'] === 'designated') { html += '🚗' }
 					if (services.properties['bin'] == 'yes') { html += '🗑️' }
 					if (services.properties['compressed_air'] == 'yes') { html += '💨' }
 					if (services.properties['drinking_water'] == 'yes') { html += '💧' }
