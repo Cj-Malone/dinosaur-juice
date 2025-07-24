@@ -49,6 +49,13 @@
 			#popup-address {
 				padding: 1em;
 			}
+			#popup-tags-table {
+				width: 100%;
+			}
+			details {
+				max-height: 15em;
+				overflow: hidden scroll;
+			}
 		</style>
 	</head>
 	<body>
@@ -163,6 +170,19 @@
 					if (services.properties['compressed_air'] == 'yes') { popup.getElementById('popup-attributes-compressed_air').style.display = 'inline'; }
 					if (services.properties['internet_access'] == 'wlan') { popup.getElementById('popup-attributes-internet_access').style.display = 'inline'; }
 
+					const table = popup.getElementById('popup-tags-table').getElementsByTagName('tbody')[0];
+					for (const [key, value] of Object.entries(services.properties)) {
+						keyColumn = document.createElement('th');
+						keyColumn.appendChild(document.createTextNode(key));
+						valueColumn = document.createElement('th');
+						valueColumn.appendChild(document.createTextNode(value));
+
+						row = document.createElement('tr');
+						row.appendChild(keyColumn);
+						row.appendChild(valueColumn);
+						table.appendChild(row);
+					}
+
 					new maplibregl.Popup()
 						.setDOMContent(popup)
 						.setLngLat(e.lngLat)
@@ -192,6 +212,19 @@
 				<img id='popup-attributes-compressed_air' class="icon" src="assets/icons/compressed_air.svg" title="air pump available">
 				<img id='popup-attributes-internet_access' class="icon" src="assets/icons/internet_access.svg" title="wifi available">
 			</div>
+			<details>
+				<summary>Tags</summary>
+				<table id='popup-tags-table'>
+					<thead>
+						<tr>
+							<th>key</th>
+							<th>value</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				<table>
+			</details>
 		</template>
 	</body>
 </html>
