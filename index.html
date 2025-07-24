@@ -13,8 +13,13 @@
 				height: 100%;
 				margin: 0px;
 			}
+			.maplibregl-popup-close-button {
+				padding: 1em;
+			}
 			.maplibregl-popup-content {
 				min-width: 300px;
+				border-radius: 3em;
+				padding: 1.5em;
 			}
 			#popup-title {
 				display: inline;
@@ -34,8 +39,15 @@
 			.icon {
 				width: 3em;
 			}
+			#popup-attributes img {
+				display: none;
+				padding: 1em;
+			}
 			#popup-contact a {
 				padding: 1.5em;
+			}
+			#popup-address {
+				padding: 1em;
 			}
 		</style>
 	</head>
@@ -146,12 +158,10 @@
 						popup.getElementById('popup-facebook').href = services.properties["contact:facebook"] || services.properties["brand:facebook"];
 					}
 
-					if (services.properties['hgv'] === 'yes' || services.properties['hgv'] === 'designated') { popup.getElementById('popup-attributes').textContent += '🚚'; }
-					if (services.properties['motorcar'] === 'yes' || services.properties['motorcar'] === 'designated') { popup.getElementById('popup-attributes').textContent += '🚗'; }
-					if (services.properties['bin'] == 'yes') { popup.getElementById('popup-attributes').textContent += '🗑️'; }
-					if (services.properties['compressed_air'] == 'yes') { popup.getElementById('popup-attributes').textContent += '💨'; }
-					if (services.properties['drinking_water'] == 'yes') { popup.getElementById('popup-attributes').textContent += '💧'; }
-					if (services.properties['internet_access'] == 'wlan') { popup.getElementById('popup-attributes').textContent += '🛜'; }
+					if (services.properties['hgv'] === 'yes' || services.properties['hgv'] === 'designated') { popup.getElementById('popup-attributes-hgv').style.display = 'inline'; }
+					if (services.properties['motorcar'] === 'yes' || services.properties['motorcar'] === 'designated') { popup.getElementById('popup-attributes-motorcar').style.display = 'inline'; }
+					if (services.properties['compressed_air'] == 'yes') { popup.getElementById('popup-attributes-compressed_air').style.display = 'inline'; }
+					if (services.properties['internet_access'] == 'wlan') { popup.getElementById('popup-attributes-internet_access').style.display = 'inline'; }
 
 					new maplibregl.Popup()
 						.setDOMContent(popup)
@@ -175,7 +185,13 @@
 				<a id='popup-facebook' rel="noreferrer noopener" target="_blank"><img class="icon" src="assets/icons/facebook.svg"></a>
 			</div>
 			<hr>
-			<span id='popup-attributes'></span>
+			<div id='popup-attributes'>
+				<img id='popup-attributes-hgv' class="icon" src="assets/icons/hgv.svg" title="trucks allowed">
+				<img id='popup-attributes-motorcar' class="icon" src="assets/icons/motorcar.svg" title="cars allowed">
+				<img id='popup-attributes-fuel' class="icon" src="assets/icons/fuel.svg" title="fuel available" style="display: inline;">
+				<img id='popup-attributes-compressed_air' class="icon" src="assets/icons/compressed_air.svg" title="air pump available">
+				<img id='popup-attributes-internet_access' class="icon" src="assets/icons/internet_access.svg" title="wifi available">
+			</div>
 		</template>
 	</body>
 </html>
