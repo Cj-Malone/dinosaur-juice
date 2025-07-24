@@ -31,6 +31,12 @@
 			#popup-ref, #popup-branch-seperator, #popup-website, #popup-phone, #popup-facebook {
 				display: none;
 			}
+			.icon {
+				width: 3em;
+			}
+			#popup-contact a {
+				padding: 1.5em;
+			}
 		</style>
 	</head>
 	<body>
@@ -162,11 +168,13 @@
 			<span id='popup-branch'></span>
 			<span id='popup-ref'></span>
 			<a id='popup-edit-link' target="_blank">✏️</a>
-			<address id='popup-address'></address>
-			<a id='popup-website' rel="noreferrer noopener" target="_blank">Website</a>
-			<a id='popup-phone'>Call</a>
-			<a id='popup-facebook' rel="noreferrer noopener" target="_blank">Facebook</a>
-			<br>
+			<div id='popup-contact'>
+				<address id='popup-address'></address>
+				<a id='popup-website' rel="noreferrer noopener" target="_blank"><img class="icon" src="assets/icons/web.svg"></a>
+				<a id='popup-phone'><img class="icon" src="assets/icons/phone.svg"></a>
+				<a id='popup-facebook' rel="noreferrer noopener" target="_blank"><img class="icon" src="assets/icons/facebook.svg"></a>
+			</div>
+			<hr>
 			<span id='popup-attributes'></span>
 		</template>
 	</body>
