@@ -85,35 +85,72 @@
 				function click(e) {
 					const services = e.features[0];
 
-					html = '';
-					html += '<h3 style="display: inline;">' + (services.properties.name || '?') + '</h3>'
-					if (services.properties.branch) { html += ' ' + services.properties.branch }
-					if (services.properties.ref) { html += ' | ' + services.properties.ref }
-					html += ' <a href="https://www.openstreetmap.org/' + services.properties['@id'] + '" target="_blank" style="text-decoration: none;">✏️</a>'
-					html += '<address>' +
+					const popup = document.createElement('div');
+
+					const title = document.createElement('h3');
+					title.appendChild(document.createTextNode(services.properties.name || '?'));
+					title.style.display = 'inline';
+					popup.appendChild(title);
+
+					if (services.properties.branch) { popup.appendChild(document.createTextNode(' ' + services.properties.branch)); }
+					if (services.properties.ref) { popup.appendChild(document.createTextNode(' | ' + services.properties.ref)); }
+
+					const editLink = document.createElement('a');
+					editLink.href = 'https://www.openstreetmap.org/' + services.properties['@id'];
+					editLink.target = '_blank';
+					editLink.style.textDecoration = 'none';
+					editLink.appendChild(document.createTextNode('✏️'));
+					popup.appendChild(editLink);
+
+					const address = document.createElement('address');
+					address.appendChild(document.createTextNode(
 						(services.properties["addr:housename"] ? services.properties["addr:housename"] + ', ' : '') +
 						(services.properties["addr:housenumber"] ? services.properties["addr:housenumber"] + ' ' : '') +
 						(services.properties["addr:street"] ? services.properties["addr:street"] + ', ' : (services.properties["addr:place"] ? services.properties["addr:place"] + ', ' : '')) +
 						(services.properties["addr:city"] ? services.properties["addr:city"] + ', ' : '') +
 						(services.properties["addr:postcode"] ? services.properties["addr:postcode"] + ', ' : '') +
 						(services.properties["addr:state"] ? services.properties["addr:state"] + ', ' : '') +
-						(services.properties["addr:country"] ? services.properties["addr:country"] : '') +
-						'</address>'
-					if (services.properties.website) { html += '<a href="' + services.properties.website + '" rel="noreferrer noopener" target="_blank">Website</a> ' }
-					if (services.properties.phone) { html += '<a href="tel:' + services.properties.phone + '">Call</a> ' }
-					if (services.properties["contact:facebook"] || services.properties["brand:facebook"]) { html += '<a href="' + (services.properties["contact:facebook"] || services.properties["brand:facebook"]) + '" rel="noreferrer noopener" target="_blank">Facebook</a> ' }
+						(services.properties["addr:country"] ? services.properties["addr:country"] : '')
+					));
+					popup.appendChild(address);
 
-					html += '<br>'
+					if (services.properties.website) {
+						const link = document.createElement('a');
+						link.href = services.properties.website;
+						link.rel = 'noreferrer noopener';
+						link.target = '_blank';
+						link.appendChild(document.createTextNode('Website'));
+						popup.appendChild(link);
+						popup.appendChild(document.createTextNode(' '));
+					}
+					if (services.properties.phone) {
+						const link = document.createElement('a');
+						link.href = services.properties.phone;
+						link.appendChild(document.createTextNode('Call'));
+						popup.appendChild(link);
+						popup.appendChild(document.createTextNode(' '));
+					}
+					if (services.properties["contact:facebook"] || services.properties["brand:facebook"]) {
+						const link = document.createElement('a');
+						link.href = services.properties["contact:facebook"] || services.properties["brand:facebook"];
+						link.rel = 'noreferrer noopener';
+						link.target = '_blank';
+						link.appendChild(document.createTextNode('Facebook'));
+						popup.appendChild(link);
+						popup.appendChild(document.createTextNode(' '));
+					}
 
-					if (services.properties['hgv'] === 'yes' || services.properties['hgv'] === 'designated') { html += '🚚' }
-					if (services.properties['motorcar'] === 'yes' || services.properties['motorcar'] === 'designated') { html += '🚗' }
-					if (services.properties['bin'] == 'yes') { html += '🗑️' }
-					if (services.properties['compressed_air'] == 'yes') { html += '💨' }
-					if (services.properties['drinking_water'] == 'yes') { html += '💧' }
-					if (services.properties['internet_access'] == 'wlan') { html += '🛜' }
+					popup.appendChild(document.createElement('br'));
+
+					if (services.properties['hgv'] === 'yes' || services.properties['hgv'] === 'designated') { popup.appendChild(document.createTextNode('🚚')); }
+					if (services.properties['motorcar'] === 'yes' || services.properties['motorcar'] === 'designated') { popup.appendChild(document.createTextNode('🚗')); }
+					if (services.properties['bin'] == 'yes') { popup.appendChild(document.createTextNode('🗑️')); }
+					if (services.properties['compressed_air'] == 'yes') {popup.appendChild(document.createTextNode('💨')); }
+					if (services.properties['drinking_water'] == 'yes') { popup.appendChild(document.createTextNode('💧')); }
+					if (services.properties['internet_access'] == 'wlan') { popup.appendChild(document.createTextNode('🛜')); }
 
 					new maplibregl.Popup()
-						.setHTML(html)
+						.setDOMContent(popup)
 						.setLngLat(e.lngLat)
 						.addTo(map);
 				}
