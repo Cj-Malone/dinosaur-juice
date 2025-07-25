@@ -32,19 +32,19 @@
 			<tbody></tbody>
 			<tfoot>
 				<tr>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
+					<th><input placeholder="filter brand"></th>
+					<th><input placeholder="filter name"></th>
+					<th><input placeholder="filter branch"></th>
+					<th><input placeholder="filter ref"></th>
+					<th><input placeholder="filter website"></th>
+					<th><input placeholder="filter phone"></th>
+					<th><input placeholder="filter facebook"></th>
+					<th><input placeholder="filter housenumber"></th>
+					<th><input placeholder="filter street"></th>
+					<th><input placeholder="filter city"></th>
+					<th><input placeholder="filter postcode"></th>
+					<th><input placeholder="filter state"></th>
+					<th><input placeholder="filter country"></th>
 				</tr>
 			</tfoot>
 		</table>
@@ -72,14 +72,12 @@
 					});
 
 					table.columns().every(function() {
-						const input = document.createElement('input');
+						const input = this.footer().getElementsByTagName('input')[0];
 						input.addEventListener('keyup', () => {
 							if (this.search() != this.value) {
 								this.search(input.value).draw();
 							}
 						});
-
-						this.footer().replaceChildren(input);
 					})
 				});
 		</script>
