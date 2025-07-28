@@ -8,6 +8,7 @@
 		<meta property="og:description" content="A map of truck stops in North America." />
 		<script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
 		<link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+		<script src="https://unpkg.com/@turf/turf@7.0.0/turf.min.js"></script>
 		<style type="text/css">
 			html, body, #map {
 				height: 100%;
@@ -74,10 +75,39 @@
 			});
 			map.addControl(new maplibregl.NavigationControl());
 			map.on('load', async function() {
-				map.addSource('services-data', {
+				map.addSource('services-polygons-data', {
 					type: 'geojson',
-					data: 'data/services-hgv.geojson'
+					data: {
+						type: 'FeatureCollection',
+						features: []
+					}
 				});
+				map.addSource('services-points-data', {
+					type: 'geojson',
+					data: {
+						type: 'FeatureCollection',
+						features: []
+					}
+				});
+				fetch('data/services-hgv.geojson')
+					.then(resp => resp.json())
+					.then(resp => {
+						const polygons = [];
+						const points = [];
+
+						resp.features.forEach((feature) => {
+							polygons.push(feature);
+
+							if (feature.geometry.type == 'Point') {
+								points.push(feature);
+							} else if (feature.geometry.type == 'Polygon' || feature.geometry.type == 'MultiPolygon') {
+								points.push(Object.assign({}, feature, {geometry: turf.centroid(feature).geometry}));
+							}
+						});
+
+						map.getSource('services-polygons-data').setData({type: 'FeatureCollection', features: polygons});
+						map.getSource('services-points-data').setData({type: 'FeatureCollection', features: points});
+					});
 				const loves = await map.loadImage('assets/logos/loves.png');
 				map.addImage('loves', loves.data);
 				const ta = await map.loadImage('assets/logos/ta.png');
@@ -91,7 +121,7 @@
 				map.addLayer({
 					id: 'services-layer',
 					type: 'symbol',
-					source: 'services-data',
+					source: 'services-polygons-data',
 					filter: ['==', 'highway', 'services'],
 					layout: {
 						'icon-image': ['match',
@@ -104,12 +134,25 @@
 							'car'
 						]
 					},
+					minzoom: 10,
 					maxzoom: 16
 				});
 				map.addLayer({
-					id: 'services-polygon-layer',
+					id: 'services-dots-layer',
+					type: 'circle',
+					source: 'services-points-data',
+					filter: ['==', 'highway', 'services'],
+					paint: {
+						'circle-color': '#4898ff',
+						'circle-radius': 7,
+						'circle-blur': 0.5
+					},
+					maxzoom: 10
+				});
+				map.addLayer({
+					id: 'services-polygons-layer',
 					type: 'fill',
-					source: 'services-data',
+					source: 'services-polygons-data',
 					filter: ['==', 'highway', 'services'],
 					paint: {
 						'fill-color': '#fc8',
@@ -120,7 +163,7 @@
 				map.addLayer({
 					id: 'services-title-layer',
 					type: 'symbol',
-					source: 'services-data',
+					source: 'services-points-data',
 					filter: ['==', 'highway', 'services'],
 					layout: {
 						'text-field': '{name} {branch} {ref}',
@@ -195,7 +238,8 @@
 						.addTo(map);
 				}
 				map.on("click", "services-layer", click);
-				map.on("click", "services-polygon-layer", click);
+				map.on("click", "services-polygons-layer", click);
+				map.on("click", "services-dots-layer", click);
 				map.on("click", "services-title-layer", click);
 			});
 		</script>
