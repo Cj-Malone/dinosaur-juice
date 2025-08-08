@@ -45,13 +45,15 @@
 						html += ' <a href="https://www.openstreetmap.org/' + services.properties['@id'] + '" target="_blank" style="text-decoration: none;">✏️</a>'
 
 						html += '<address>' +
-							(services.properties["addr:housename"] ? services.properties["addr:housename"] + ', ' : '') +
-							(services.properties["addr:housenumber"] ? services.properties["addr:housenumber"] + ' ' : '') +
-							(services.properties["addr:street"] ? services.properties["addr:street"] + ', ' : (services.properties["addr:place"] ? services.properties["addr:place"] + ', ' : '')) +
-							(services.properties["addr:city"] ? services.properties["addr:city"] + ', ' : '') +
-							(services.properties["addr:postcode"] ? services.properties["addr:postcode"] + ', ' : '') +
-							(services.properties["addr:state"] ? services.properties["addr:state"] + ', ' : '') +
-							(services.properties["addr:country"] ? services.properties["addr:country"] : '') +
+							(services.properties['addr:housenumber'] ?
+								(services.properties['addr:housename'] ? services.properties['addr:housename'] + ', ' : '') +
+								(services.properties['addr:housenumber'] ? services.properties['addr:housenumber'] + ' ' : '') +
+								(services.properties['addr:street'] ? services.properties['addr:street'] + ', ' :
+								(services.properties['addr:place'] ? services.properties['addr:place'] : '')) : services.properties['addr:street_address'] ? services.properties['addr:street_address'] + ', ' : '') +
+							(services.properties['addr:city'] ? services.properties['addr:city'] + ', ' : '') +
+							(services.properties['addr:postcode'] ? services.properties['addr:postcode'] + ', ' : '') +
+							(services.properties['addr:state'] ? services.properties['addr:state'] + ', ' : '') +
+							(services.properties['addr:country'] ? services.properties['addr:country'] : '') +
 							'</address>'
 
 						if (services.properties.website) { html += '<a href="' + services.properties.website + '" rel="noreferrer noopener" target="_blank">Website</a> ' }

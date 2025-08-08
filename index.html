@@ -191,13 +191,15 @@
 					popup.getElementById('popup-edit-link').href = 'https://www.openstreetmap.org/' + services.properties['@id'];
 
 					popup.getElementById('popup-address').textContent =
-						(services.properties["addr:housename"] ? services.properties["addr:housename"] + ', ' : '') +
-						(services.properties["addr:housenumber"] ? services.properties["addr:housenumber"] + ' ' : '') +
-						(services.properties["addr:street"] ? services.properties["addr:street"] + ', ' : (services.properties["addr:place"] ? services.properties["addr:place"] + ', ' : '')) +
-						(services.properties["addr:city"] ? services.properties["addr:city"] + ', ' : '') +
-						(services.properties["addr:postcode"] ? services.properties["addr:postcode"] + ', ' : '') +
-						(services.properties["addr:state"] ? services.properties["addr:state"] + ', ' : '') +
-						(services.properties["addr:country"] ? services.properties["addr:country"] : '');
+						(services.properties['addr:housenumber'] ?
+							(services.properties['addr:housename'] ? services.properties['addr:housename'] + ', ' : '') +
+							(services.properties['addr:housenumber'] ? services.properties['addr:housenumber'] + ' ' : '') +
+							(services.properties['addr:street'] ? services.properties['addr:street'] + ', ' :
+							(services.properties['addr:place'] ? services.properties['addr:place'] : '')) : services.properties['addr:street_address'] ? services.properties['addr:street_address'] + ', ' : '') +
+						(services.properties['addr:city'] ? services.properties['addr:city'] + ', ' : '') +
+						(services.properties['addr:postcode'] ? services.properties['addr:postcode'] + ', ' : '') +
+						(services.properties['addr:state'] ? services.properties['addr:state'] + ', ' : '') +
+						(services.properties['addr:country'] ? services.properties['addr:country'] : '');
 
 					if (services.properties.website) {
 						popup.getElementById('popup-website').style.display = 'inline';
@@ -207,9 +209,9 @@
 						popup.getElementById('popup-phone').style.display = 'inline';
 						popup.getElementById('popup-phone').href = 'tel:' + services.properties.phone;
 					}
-					if (services.properties["contact:facebook"] || services.properties["brand:facebook"]) {
+					if (services.properties['contact:facebook'] || services.properties['brand:facebook']) {
 						popup.getElementById('popup-facebook').style.display = 'inline';
-						popup.getElementById('popup-facebook').href = services.properties["contact:facebook"] || services.properties["brand:facebook"];
+						popup.getElementById('popup-facebook').href = services.properties['contact:facebook'] || services.properties['brand:facebook'];
 					}
 
 					if (services.properties['hgv'] === 'yes' || services.properties['hgv'] === 'designated') { popup.getElementById('popup-attributes-hgv').style.display = 'inline'; }
@@ -237,10 +239,10 @@
 						.setLngLat(e.lngLat)
 						.addTo(map);
 				}
-				map.on("click", "services-layer", click);
-				map.on("click", "services-polygons-layer", click);
-				map.on("click", "services-dots-layer", click);
-				map.on("click", "services-title-layer", click);
+				map.on('click', 'services-layer', click);
+				map.on('click', 'services-polygons-layer', click);
+				map.on('click', 'services-dots-layer', click);
+				map.on('click', 'services-title-layer', click);
 			});
 		</script>
 		<template id='popup-template'>
