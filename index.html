@@ -21,6 +21,8 @@
 				min-width: 300px;
 				border-radius: 3em;
 				padding: 1.5em;
+				color: #444444;
+				background: #EEEEEE;
 			}
 			#popup-title {
 				display: inline;
@@ -39,6 +41,7 @@
 			}
 			.icon {
 				width: 3em;
+				filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
 			}
 			#popup-attributes img {
 				display: none;
@@ -61,13 +64,22 @@
 				text-align: center;
 				list-style: none;
 			}
+			@media (prefers-color-scheme: dark) {
+				.maplibregl-popup-content {
+					color: #EEEEEE;
+					background: #444444;
+				}
+				.icon {
+					filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(0%);
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<div id="map"></div>
 		<script>
 			const map = new maplibregl.Map({
-				style: 'https://tiles.openfreemap.org/styles/liberty',
+				style: window.matchMedia("(prefers-color-scheme: dark)").matches ? 'https://tiles.openfreemap.org/styles/dark' : 'https://tiles.openfreemap.org/styles/liberty',
 				center: [-96.5, 35.5],
 				zoom: 5,
 				container: 'map',
