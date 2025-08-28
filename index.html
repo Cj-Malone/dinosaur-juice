@@ -14,10 +14,20 @@
 				height: 100%;
 				margin: 0px;
 			}
-			.maplibregl-popup-close-button {
-				padding: 1em;
+			@media (min-width: 768px) {
+				#popup {
+					  top: 1em;
+				}
 			}
-			.maplibregl-popup-content {
+			@media (max-width: 767px) {
+				#popup {
+					  bottom: 3.5em;
+					  width: 82%;
+					  left: 10px;
+				}
+			}
+			#popup {
+				position: absolute;
 				min-width: 300px;
 				border-radius: 3em;
 				padding: 1.5em;
@@ -65,7 +75,7 @@
 				list-style: none;
 			}
 			@media (prefers-color-scheme: dark) {
-				.maplibregl-popup-content {
+				#popup {
 					color: #EEEEEE;
 					background: #444444;
 				}
@@ -77,9 +87,11 @@
 	</head>
 	<body>
 		<div id="map"></div>
+		<div id="popup" style="display: none">
+		</div>
 		<script>
 			const map = new maplibregl.Map({
-				style: window.matchMedia("(prefers-color-scheme: dark)").matches ? 'https://tiles.openfreemap.org/styles/dark' : 'https://tiles.openfreemap.org/styles/liberty',
+				style: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'https://tiles.openfreemap.org/styles/dark' : 'https://tiles.openfreemap.org/styles/liberty',
 				center: [-96.5, 35.5],
 				zoom: 5,
 				container: 'map',
@@ -188,6 +200,7 @@
 				const popupTemplate = document.getElementById('popup-template');
 
 				function click(e) {
+					document.getElementById('popup').style.display = '';
 					const services = e.features[0];
 
 					const popup = popupTemplate.content.cloneNode(true);
@@ -246,11 +259,9 @@
 						table.appendChild(row);
 					}
 
-					new maplibregl.Popup()
-						.setDOMContent(popup)
-						.setLngLat(e.lngLat)
-						.addTo(map);
+					document.getElementById('popup').replaceChildren(popup);
 				}
+				map.on('click', () => document.getElementById('popup').style.display = 'none');
 				map.on('click', 'services-layer', click);
 				map.on('click', 'services-polygons-layer', click);
 				map.on('click', 'services-dots-layer', click);
