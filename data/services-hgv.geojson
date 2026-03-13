@@ -6629,7 +6629,7 @@
         "name": "Northampton Services",
         "old_name": "Rothersthorpe Services",
         "opening_hours": "24/7",
-        "operator": "RoadChef",
+        "operator": "Roadchef",
         "operator:wikidata": "Q7339582",
         "outdoor_seating": "yes",
         "phone": "+44 1604 831888",
@@ -13443,7 +13443,7 @@
         "name": "Northampton Services",
         "old_name": "Rothersthorpe Services",
         "opening_hours": "24/7",
-        "operator": "RoadChef",
+        "operator": "Roadchef",
         "operator:wikidata": "Q7339582",
         "outdoor_seating": "yes",
         "phone": "+44 1604 831888",
@@ -13611,7 +13611,7 @@
         "motorcar": "yes",
         "name": "Watford Gap Services Southbound",
         "opening_hours": "24/7",
-        "operator": "RoadChef",
+        "operator": "Roadchef",
         "operator:wikidata": "Q7339582",
         "outdoor_seating": "yes",
         "phone": "+44 1327 879001",
@@ -13744,7 +13744,7 @@
         "motorcar": "yes",
         "name": "Watford Gap Services Northbound",
         "opening_hours": "24/7",
-        "operator": "RoadChef",
+        "operator": "Roadchef",
         "operator:wikidata": "Q7339582",
         "outdoor_seating": "yes",
         "phone": "+44 1327 879001",
@@ -20775,12 +20775,8 @@
       "type": "Feature",
       "properties": {
         "@id": "way/188958038",
-        "addr:city": "Tulsa",
         "addr:country": "US",
-        "addr:housenumber": "6008",
-        "addr:postcode": "74129",
         "addr:state": "OK",
-        "addr:street": "South 49th West Avenue",
         "atm": "yes",
         "brand": "QuikTrip",
         "brand:wikidata": "Q7271953",
@@ -98783,22 +98779,31 @@
       "type": "Feature",
       "properties": {
         "@id": "way/621272911",
+        "addr:city": "Tehachapi",
         "addr:country": "US",
+        "addr:housenumber": "1668",
+        "addr:postcode": "93561",
         "addr:state": "CA",
+        "addr:street": "East Tehachapi Boulevard",
         "bin": "yes",
-        "brand": "Flying J",
+        "brand": "Pilot",
         "brand:facebook": "https://www.facebook.com/pilottravelcenters",
         "brand:instagram": "https://www.instagram.com/pilotflyingj/",
         "brand:twitter": "https://x.com/pilotflyingj",
-        "brand:wikidata": "Q64130592",
-        "check_date": "2024-08-02",
+        "brand:wikidata": "Q64128179",
+        "check_date": "2026-01-04",
+        "disused:brand": "Flying J",
+        "disused:brand:wikidata": "Q64130592",
         "drinking_water": "yes",
-        "fax": "+1 661-823-1123",
+        "fax": "+1-661-823-1123",
         "hgv": "yes",
         "highway": "services",
         "motorcar": "yes",
-        "name": "Flying J Travel Center",
-        "phone": "+1 661-823-1049",
+        "name": "Pilot Travel Center",
+        "official_name": "Pilot Travel Center #1094",
+        "old_name": "Flying J Travel Center",
+        "phone": "+1-661-823-1049",
+        "ref": "1094",
         "toilets": "yes",
         "website": "https://locations.pilotflyingj.com/us/ca/tehachapi/1668-e.-tehachapi-blvd",
         "wheelchair": "yes"
@@ -131175,8 +131180,8 @@
         "coordinates": [
           [
             [
-              -101.4738705,
-              32.2653786
+              -101.4738551,
+              32.2653809
             ],
             [
               -101.4741154,
@@ -131219,16 +131224,16 @@
               32.2660611
             ],
             [
-              -101.4770575,
-              32.2660279
+              -101.476908,
+              32.2660392
             ],
             [
-              -101.4766493,
-              32.2647838
+              -101.4765413,
+              32.264794
             ],
             [
-              -101.4738705,
-              32.2653786
+              -101.4738551,
+              32.2653809
             ]
           ]
         ]
