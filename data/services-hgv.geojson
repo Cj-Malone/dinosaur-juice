@@ -44365,8 +44365,10 @@
         "@id": "way/223165641",
         "addr:city": "Whitestown",
         "addr:country": "US",
+        "addr:housenumber": "5930",
         "addr:postcode": "46075-9801",
         "addr:state": "IN",
+        "addr:street": "Whitestown Parkway",
         "branch": "Whitestown",
         "brand": "TA",
         "brand:facebook": "https://www.facebook.com/TravelCentersOfAmerica",
@@ -44375,7 +44377,6 @@
         "brand:wikidata": "Q7835892",
         "hgv": "yes",
         "highway": "services",
-        "historic": "yes",
         "motorcar": "yes",
         "name": "TA",
         "official_name": "TravelCenters of America",
@@ -138247,6 +138248,7 @@
         "@id": "way/1324495746",
         "addr:city": "Cortez",
         "addr:country": "US",
+        "addr:housenumber": "7006",
         "addr:postcode": "81321",
         "addr:state": "CO",
         "brand": "Love's",
@@ -138254,7 +138256,6 @@
         "brand:instagram": "https://www.instagram.com/lovestravelstops/",
         "brand:twitter": "https://x.com/LovesTravelStop",
         "brand:wikidata": "Q1872496",
-        "fixme_1": "Trace inner when imagery available",
         "hgv": "yes",
         "highway": "services",
         "motorcar": "yes",
@@ -138269,12 +138270,16 @@
         "coordinates": [
           [
             [
-              -108.6073225,
-              37.313481
+              -108.6072151,
+              37.3133942
             ],
             [
-              -108.6093099,
-              37.3134836
+              -108.6075246,
+              37.3135836
+            ],
+            [
+              -108.6091944,
+              37.3135377
             ],
             [
               -108.6093123,
@@ -138293,8 +138298,12 @@
               37.3125255
             ],
             [
-              -108.6073225,
-              37.313481
+              -108.607236,
+              37.3125254
+            ],
+            [
+              -108.6072151,
+              37.3133942
             ]
           ]
         ]
@@ -138307,6 +138316,7 @@
         "@id": "way/1324606949",
         "addr:city": "Monroe Center",
         "addr:country": "US",
+        "addr:housenumber": "16991",
         "addr:postcode": "61052",
         "addr:state": "IL",
         "brand": "Love's",
@@ -138314,7 +138324,6 @@
         "brand:instagram": "https://www.instagram.com/lovestravelstops/",
         "brand:twitter": "https://x.com/LovesTravelStop",
         "brand:wikidata": "Q1872496",
-        "fixme_1": "Trace when imagery available",
         "hgv": "yes",
         "highway": "services",
         "motorcar": "yes",
@@ -140517,7 +140526,6 @@
         "brand:instagram": "https://www.instagram.com/lovestravelstops/",
         "brand:twitter": "https://x.com/LovesTravelStop",
         "brand:wikidata": "Q1872496",
-        "fixme_1": "Check trace when better imagery available",
         "hgv": "yes",
         "highway": "services",
         "motorcar": "yes",
@@ -140552,16 +140560,16 @@
               32.87765
             ],
             [
-              -85.1470792,
-              32.8764561
+              -85.1474172,
+              32.8766048
             ],
             [
-              -85.1465321,
-              32.8778031
+              -85.1470739,
+              32.8773075
             ],
             [
-              -85.1460117,
-              32.8781951
+              -85.1463014,
+              32.8782807
             ],
             [
               -85.146355,
@@ -144099,7 +144107,6 @@
         "brand:instagram": "https://www.instagram.com/travelcentersofamerica/",
         "brand:twitter": "https://x.com/TATravelCenters",
         "brand:wikidata": "Q7835892",
-        "fixme_1": "Trace when better imagery availabe",
         "hgv": "yes",
         "highway": "services",
         "motorcar": "yes",
@@ -144115,8 +144122,24 @@
         "coordinates": [
           [
             [
-              -93.8026633,
-              37.0909244
+              -93.8021966,
+              37.0909287
+            ],
+            [
+              -93.802278,
+              37.0906677
+            ],
+            [
+              -93.8042253,
+              37.0906335
+            ],
+            [
+              -93.8042092,
+              37.089906
+            ],
+            [
+              -93.8027018,
+              37.0898376
             ],
             [
               -93.802726,
@@ -144131,12 +144154,12 @@
               37.0902857
             ],
             [
-              -93.7992865,
-              37.0908772
+              -93.7997586,
+              37.0911468
             ],
             [
-              -93.8026633,
-              37.0909244
+              -93.8021966,
+              37.0909287
             ]
           ]
         ]
