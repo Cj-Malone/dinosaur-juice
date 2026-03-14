@@ -95456,6 +95456,82 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "way/421845511",
+        "addr:city": "Pittston",
+        "addr:country": "US",
+        "addr:postcode": "18640",
+        "addr:state": "PA",
+        "brand": "Pilot",
+        "brand:facebook": "https://www.facebook.com/pilottravelcenters",
+        "brand:instagram": "https://www.instagram.com/pilotflyingj/",
+        "brand:twitter": "https://x.com/pilotflyingj",
+        "brand:wikidata": "Q64128179",
+        "check_date": "2024-08-02",
+        "email": "TravelCenter.370@pilottravelcenters.com",
+        "fax": "+1 570-655-2479",
+        "hgv": "yes",
+        "highway": "services",
+        "motorcar": "yes",
+        "name": "Pilot Travel Center",
+        "opening_hours": "Mo-Su 00:00-24:00",
+        "phone": "+1 570-655-4116",
+        "ref": "370",
+        "toilets": "yes",
+        "website": "https://locations.pilotflyingj.com/us/pa/pittston/417-route-315",
+        "addr:street_address": "417 Route 315"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -75.755222,
+              41.3149206
+            ],
+            [
+              -75.7560513,
+              41.3141039
+            ],
+            [
+              -75.7540976,
+              41.313048
+            ],
+            [
+              -75.752288,
+              41.3133197
+            ],
+            [
+              -75.75235,
+              41.313885
+            ],
+            [
+              -75.7535794,
+              41.3146122
+            ],
+            [
+              -75.7537945,
+              41.3144029
+            ],
+            [
+              -75.7539608,
+              41.31448
+            ],
+            [
+              -75.7541514,
+              41.3143221
+            ],
+            [
+              -75.755222,
+              41.3149206
+            ]
+          ]
+        ]
+      },
+      "id": "way/421845511"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "way/452193321",
         "addr:city": "Menomonie",
         "addr:country": "US",
@@ -106005,6 +106081,85 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "way/1016983683",
+        "addr:country": "US",
+        "addr:state": "WA",
+        "contact:facebook": "https://www.facebook.com/ColvilleFuelsHalfsun/",
+        "hgv": "yes",
+        "highway": "services",
+        "motorcar": "yes",
+        "name": "Colville Fuels Half Sun Travel Plaza",
+        "phone": "+1-509-765-9109",
+        "website": "https://www.colvillefuels.com/half-sun"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -119.318721,
+              47.0992318
+            ],
+            [
+              -119.318748,
+              47.0987328
+            ],
+            [
+              -119.3179096,
+              47.0986894
+            ],
+            [
+              -119.3156594,
+              47.0977296
+            ],
+            [
+              -119.3140277,
+              47.0995383
+            ],
+            [
+              -119.3139428,
+              47.0996772
+            ],
+            [
+              -119.3139627,
+              47.0997051
+            ],
+            [
+              -119.3140096,
+              47.0997164
+            ],
+            [
+              -119.3144713,
+              47.0996721
+            ],
+            [
+              -119.3163485,
+              47.0991707
+            ],
+            [
+              -119.3171704,
+              47.0991612
+            ],
+            [
+              -119.3181804,
+              47.0994055
+            ],
+            [
+              -119.3184145,
+              47.0994173
+            ],
+            [
+              -119.318721,
+              47.0992318
+            ]
+          ]
+        ]
+      },
+      "id": "way/1016983683"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "way/1017057682",
         "addr:city": "Tifton",
         "addr:country": "US",
@@ -111268,6 +111423,125 @@
         ]
       },
       "id": "way/1101863365"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1102478977",
+        "addr:country": "US",
+        "addr:housenumber": "2325",
+        "addr:state": "CA",
+        "addr:street": "Sierra Lakes Parkway",
+        "brand": "Pilot",
+        "brand:facebook": "https://www.facebook.com/pilottravelcenters",
+        "brand:instagram": "https://www.instagram.com/pilotflyingj/",
+        "brand:twitter": "https://x.com/pilotflyingj",
+        "brand:wikidata": "Q64128179",
+        "check_date": "2024-08-02",
+        "fax": "+1 909-903-3644",
+        "hgv": "yes",
+        "highway": "services",
+        "motorcar": "yes",
+        "name": "Pilot Travel Center",
+        "phone": "+1 909-903-3641",
+        "website": "https://locations.pilotflyingj.com/us/ca/rialto/2325-sierra-lakes-parkway-suite-102"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -117.4187687,
+              34.1377049
+            ],
+            [
+              -117.4187361,
+              34.1384239
+            ],
+            [
+              -117.4187781,
+              34.1384741
+            ],
+            [
+              -117.4189172,
+              34.1384878
+            ],
+            [
+              -117.4196093,
+              34.1383775
+            ],
+            [
+              -117.4207225,
+              34.138104
+            ],
+            [
+              -117.4210021,
+              34.138034
+            ],
+            [
+              -117.4230973,
+              34.1375511
+            ],
+            [
+              -117.4233915,
+              34.1375148
+            ],
+            [
+              -117.4236887,
+              34.1374837
+            ],
+            [
+              -117.42468,
+              34.1374169
+            ],
+            [
+              -117.4255869,
+              34.1373669
+            ],
+            [
+              -117.4265084,
+              34.1373184
+            ],
+            [
+              -117.4269508,
+              34.1373
+            ],
+            [
+              -117.4272508,
+              34.1372973
+            ],
+            [
+              -117.4274406,
+              34.1373106
+            ],
+            [
+              -117.4274681,
+              34.1369357
+            ],
+            [
+              -117.4244048,
+              34.1369551
+            ],
+            [
+              -117.4229344,
+              34.1370517
+            ],
+            [
+              -117.4207442,
+              34.1374189
+            ],
+            [
+              -117.4188248,
+              34.1376586
+            ],
+            [
+              -117.4187687,
+              34.1377049
+            ]
+          ]
+        ]
+      },
+      "id": "way/1102478977"
     },
     {
       "type": "Feature",
@@ -123927,8 +124201,12 @@
       "type": "Feature",
       "properties": {
         "@id": "way/1305263221",
+        "addr:city": "Holladay",
         "addr:country": "US",
+        "addr:housenumber": "15060",
+        "addr:postcode": "38341",
         "addr:state": "TN",
+        "addr:street": "US-641",
         "brand": "ONE9",
         "check_date": "2024-08-02",
         "fax": "+1 731-734-0068",
@@ -160007,7 +160285,68 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/9175586355",
+        "@id": "way/1488638439",
+        "addr:city": "Gordonsville",
+        "addr:country": "US",
+        "addr:housenumber": "502",
+        "addr:postcode": "38563",
+        "addr:state": "TN",
+        "addr:street": "Gordonsville Highway",
+        "brand": "Pilot",
+        "brand:facebook": "https://www.facebook.com/pilottravelcenters",
+        "brand:instagram": "https://www.instagram.com/pilotflyingj/",
+        "brand:twitter": "https://x.com/pilotflyingj",
+        "brand:wikidata": "Q64128179",
+        "check_date": "2024-08-02",
+        "email": "TravelCenter.4597@pilottravelcenters.com",
+        "fax": "+1 615-683-3415",
+        "hgv": "yes",
+        "highway": "services",
+        "motorcar": "yes",
+        "name": "Pilot Travel Center",
+        "opening_hours": "Mo-Su 00:00-24:00",
+        "phone": "+1 615-683-3410",
+        "ref": "4597",
+        "website": "https://locations.pilotflyingj.com/us/tn/gordonsville/502-gordonsville-highway",
+        "addr:street_address": "502 Gordonsville Highway"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -85.9477991,
+              36.1775616
+            ],
+            [
+              -85.9507683,
+              36.1776763
+            ],
+            [
+              -85.9508005,
+              36.176163
+            ],
+            [
+              -85.9499878,
+              36.1761153
+            ],
+            [
+              -85.9477589,
+              36.1768774
+            ],
+            [
+              -85.9477991,
+              36.1775616
+            ]
+          ]
+        ]
+      },
+      "id": "way/1488638439"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1488639480",
         "addr:country": "US",
         "addr:state": "CA",
         "hgv": "yes",
@@ -160016,73 +160355,58 @@
         "toilets": "yes"
       },
       "geometry": {
-        "type": "Point",
+        "type": "Polygon",
         "coordinates": [
-          -118.1761267,
-          35.0637224
+          [
+            [
+              -118.1760841,
+              35.0631955
+            ],
+            [
+              -118.1754651,
+              35.0637912
+            ],
+            [
+              -118.1753239,
+              35.0646515
+            ],
+            [
+              -118.1764963,
+              35.0647621
+            ],
+            [
+              -118.1765065,
+              35.0643881
+            ],
+            [
+              -118.1764099,
+              35.0638502
+            ],
+            [
+              -118.1771447,
+              35.0636866
+            ],
+            [
+              -118.1767143,
+              35.0623448
+            ],
+            [
+              -118.1765831,
+              35.0625523
+            ],
+            [
+              -118.1760841,
+              35.0631955
+            ]
+          ]
         ]
       },
-      "id": "node/9175586355"
+      "id": "way/1488639480"
     },
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/9380257567",
-        "addr:country": "US",
-        "addr:state": "WA",
-        "contact:facebook": "https://www.facebook.com/ColvilleFuelsHalfsun/",
-        "hgv": "yes",
-        "highway": "services",
-        "motorcar": "yes",
-        "name": "Colville Fuels Half Sun Travel Plaza",
-        "phone": "+1-509-765-9109",
-        "website": "https://www.colvillefuels.com/half-sun"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.3171027,
-          47.0987383
-        ]
-      },
-      "id": "node/9380257567"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10088267086",
-        "addr:country": "US",
-        "addr:housenumber": "2325",
-        "addr:state": "CA",
-        "addr:street": "Sierra Lakes Parkway",
-        "brand": "Pilot",
-        "brand:facebook": "https://www.facebook.com/pilottravelcenters",
-        "brand:instagram": "https://www.instagram.com/pilotflyingj/",
-        "brand:twitter": "https://x.com/pilotflyingj",
-        "brand:wikidata": "Q64128179",
-        "check_date": "2024-08-02",
-        "fax": "+1 909-903-3644",
-        "hgv": "yes",
-        "highway": "services",
-        "motorcar": "yes",
-        "name": "Pilot Travel Center",
-        "phone": "+1 909-903-3641",
-        "source": "https://www.bidamerica.com/142639/pilot-travel-center-1328-alder-avenue-and-sierra-lakes-pkwy-offsite-improvements/",
-        "website": "https://locations.pilotflyingj.com/us/ca/rialto/2325-sierra-lakes-parkway-suite-102"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -117.4207517,
-          34.1377408
-        ]
-      },
-      "id": "node/10088267086"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10282967792",
+        "@id": "way/1488639871",
         "addr:city": "Marianna",
         "addr:country": "US",
         "addr:postcode": "32448",
@@ -160106,48 +160430,210 @@
         "addr:street_address": "2209 Highway 71"
       },
       "geometry": {
-        "type": "Point",
+        "type": "Polygon",
         "coordinates": [
-          -85.1868162,
-          30.7256119
+          [
+            [
+              -85.1869968,
+              30.7265708
+            ],
+            [
+              -85.1882568,
+              30.7265808
+            ],
+            [
+              -85.1882693,
+              30.7254232
+            ],
+            [
+              -85.1878663,
+              30.72542
+            ],
+            [
+              -85.1878689,
+              30.7251833
+            ],
+            [
+              -85.1859075,
+              30.7251676
+            ],
+            [
+              -85.1859015,
+              30.725722
+            ],
+            [
+              -85.1865161,
+              30.7257269
+            ],
+            [
+              -85.1865131,
+              30.7260062
+            ],
+            [
+              -85.1870029,
+              30.7260101
+            ],
+            [
+              -85.1869968,
+              30.7265708
+            ]
+          ]
         ]
       },
-      "id": "node/10282967792"
+      "id": "way/1488639871"
     },
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/10742335859",
-        "addr:city": "Gordonsville",
+        "@id": "way/1488761772",
+        "addr:city": "Ogden",
         "addr:country": "US",
-        "addr:postcode": "38563",
-        "addr:state": "TN",
-        "brand": "Pilot",
+        "addr:postcode": "84401",
+        "addr:state": "UT",
+        "brand": "Flying J",
         "brand:facebook": "https://www.facebook.com/pilottravelcenters",
         "brand:instagram": "https://www.instagram.com/pilotflyingj/",
         "brand:twitter": "https://x.com/pilotflyingj",
-        "brand:wikidata": "Q64128179",
+        "brand:wikidata": "Q64130592",
         "check_date": "2024-08-02",
-        "email": "TravelCenter.4597@pilottravelcenters.com",
-        "fax": "+1 615-683-3415",
+        "email": "TravelCenter.744@pilottravelcenters.com",
+        "fax": "+1 801-849-3424",
         "hgv": "yes",
         "highway": "services",
         "motorcar": "yes",
-        "name": "Pilot Travel Center",
+        "name": "Flying J Travel Center",
         "opening_hours": "Mo-Su 00:00-24:00",
-        "phone": "+1 615-683-3410",
-        "ref": "4597",
-        "website": "https://locations.pilotflyingj.com/us/tn/gordonsville/502-gordonsville-highway",
-        "addr:street_address": "502 Gordonsville Highway"
+        "phone": "+1 801-849-3414",
+        "ref": "744",
+        "website": "https://locations.pilotflyingj.com/us/ut/ogden/1172-west-21st-street",
+        "addr:street_address": "1172 West 21St Street"
       },
       "geometry": {
-        "type": "Point",
+        "type": "Polygon",
         "coordinates": [
-          -85.948631,
-          36.1771575
+          [
+            [
+              -112.0082733,
+              41.2304236
+            ],
+            [
+              -112.0070207,
+              41.2304196
+            ],
+            [
+              -112.0065326,
+              41.2307463
+            ],
+            [
+              -112.0065379,
+              41.2316823
+            ],
+            [
+              -112.0090941,
+              41.2316642
+            ],
+            [
+              -112.0097351,
+              41.2317186
+            ],
+            [
+              -112.0100623,
+              41.2315572
+            ],
+            [
+              -112.0102729,
+              41.2315865
+            ],
+            [
+              -112.0106363,
+              41.2305729
+            ],
+            [
+              -112.0105961,
+              41.2305043
+            ],
+            [
+              -112.0097002,
+              41.2305083
+            ],
+            [
+              -112.0088205,
+              41.2303732
+            ],
+            [
+              -112.0082814,
+              41.2303772
+            ],
+            [
+              -112.0082733,
+              41.2304236
+            ]
+          ]
         ]
       },
-      "id": "node/10742335859"
+      "id": "way/1488761772"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1488763077",
+        "addr:city": "Valdosta",
+        "addr:country": "US",
+        "addr:postcode": "31601",
+        "addr:state": "GA",
+        "addr:street": "Old Clyattville Road",
+        "brand": "Love's",
+        "brand:facebook": "https://www.facebook.com/lovestravelstops",
+        "brand:instagram": "https://www.instagram.com/lovestravelstops/",
+        "brand:twitter": "https://x.com/LovesTravelStop",
+        "brand:wikidata": "Q1872496",
+        "hgv": "yes",
+        "highway": "services",
+        "internet_access": "wlan",
+        "motorcar": "yes",
+        "name": "Love's Travel Stop",
+        "phone": "+1 229-588-7706",
+        "ref": "550",
+        "shower": "yes",
+        "website": "https://www.loves.com/locations/550",
+        "addr:street_address": "I-75 Old Clyattville Rd"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -83.2995415,
+              30.7745609
+            ],
+            [
+              -83.2991606,
+              30.7739018
+            ],
+            [
+              -83.2991391,
+              30.7718415
+            ],
+            [
+              -83.2974333,
+              30.7718553
+            ],
+            [
+              -83.2975245,
+              30.7746162
+            ],
+            [
+              -83.2977927,
+              30.7755334
+            ],
+            [
+              -83.2995415,
+              30.7745609
+            ]
+          ]
+        ]
+      },
+      "id": "way/1488763077"
     },
     {
       "type": "Feature",
@@ -160185,111 +160671,6 @@
         ]
       },
       "id": "node/10780746067"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/11466754486",
-        "addr:city": "Pittston",
-        "addr:country": "US",
-        "addr:postcode": "18640",
-        "addr:state": "PA",
-        "brand": "Pilot",
-        "brand:facebook": "https://www.facebook.com/pilottravelcenters",
-        "brand:instagram": "https://www.instagram.com/pilotflyingj/",
-        "brand:twitter": "https://x.com/pilotflyingj",
-        "brand:wikidata": "Q64128179",
-        "check_date": "2024-08-02",
-        "email": "TravelCenter.370@pilottravelcenters.com",
-        "fax": "+1 570-655-2479",
-        "hgv": "yes",
-        "highway": "services",
-        "motorcar": "yes",
-        "name": "Pilot Travel Center",
-        "opening_hours": "Mo-Su 00:00-24:00",
-        "phone": "+1 570-655-4116",
-        "ref": "370",
-        "toilets": "yes",
-        "website": "https://locations.pilotflyingj.com/us/pa/pittston/417-route-315",
-        "addr:street_address": "417 Route 315"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.7550304,
-          41.3142422
-        ]
-      },
-      "id": "node/11466754486"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/12142985740",
-        "addr:city": "Ogden",
-        "addr:country": "US",
-        "addr:postcode": "84401",
-        "addr:state": "UT",
-        "brand": "Flying J",
-        "brand:facebook": "https://www.facebook.com/pilottravelcenters",
-        "brand:instagram": "https://www.instagram.com/pilotflyingj/",
-        "brand:twitter": "https://x.com/pilotflyingj",
-        "brand:wikidata": "Q64130592",
-        "check_date": "2024-08-02",
-        "email": "TravelCenter.744@pilottravelcenters.com",
-        "fax": "+1 801-849-3424",
-        "hgv": "yes",
-        "highway": "services",
-        "motorcar": "yes",
-        "name": "Flying J Travel Center",
-        "opening_hours": "Mo-Su 00:00-24:00",
-        "phone": "+1 801-849-3414",
-        "ref": "744",
-        "website": "https://locations.pilotflyingj.com/us/ut/ogden/1172-west-21st-street",
-        "addr:street_address": "1172 West 21St Street"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -112.0079407,
-          41.2308391
-        ]
-      },
-      "id": "node/12142985740"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/13005257662",
-        "addr:city": "Valdosta",
-        "addr:country": "US",
-        "addr:postcode": "31601",
-        "addr:state": "GA",
-        "addr:street": "Old Clyattville Road",
-        "brand": "Love's",
-        "brand:facebook": "https://www.facebook.com/lovestravelstops",
-        "brand:instagram": "https://www.instagram.com/lovestravelstops/",
-        "brand:twitter": "https://x.com/LovesTravelStop",
-        "brand:wikidata": "Q1872496",
-        "hgv": "yes",
-        "highway": "services",
-        "internet_access": "wlan",
-        "motorcar": "yes",
-        "name": "Love's Travel Stop",
-        "phone": "+1 229-588-7706",
-        "ref": "550",
-        "shower": "yes",
-        "website": "https://www.loves.com/locations/550",
-        "addr:street_address": "I-75 Old Clyattville Rd"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.298092,
-          30.7740206
-        ]
-      },
-      "id": "node/13005257662"
     }
   ]
 }
